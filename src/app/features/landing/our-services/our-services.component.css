@@ -1,0 +1,131 @@
+.services {
+    position: relative;
+}
+
+.box {
+    overflow: hidden;
+    position: relative;
+    background: #000;
+    height: 320px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    transition: 0.8s;
+}
+
+.lay {
+    background: linear-gradient(to top,
+            rgba(24, 56, 96, 0.9) 0%,
+            rgba(0, 133, 163, 0.6) 40%,
+            rgba(0, 133, 163, 0.3) 70%,
+            rgba(0, 186, 216, 0.0) 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.8s;
+}
+
+.box:hover img {
+    scale: 1.1;
+}
+
+
+.row .info {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 0 15px 20px;
+}
+
+.row .info h4 {
+    font-size: 25px;
+    color: #fff;
+    transition: 0.8s;
+
+}
+
+.row .info p {
+    color: #fff;
+    position: relative;
+    font-size: 10px;
+}
+
+.shape {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    filter: grayscale() opacity(0.4);
+    height: 100%;
+    width: 400px;
+}
+
+
+
+.request {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: linear-gradient(to left,
+            rgba(24, 56, 96, 1) 0%,
+            rgba(0, 133, 163, 0.9) 40%,
+            rgba(0, 133, 163, 0.7) 70%,
+            rgba(0, 186, 216, 0.3) 100%);
+    padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.request .text p {
+    margin: 0;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.request button {
+    font-size: 20px;
+    padding: 15px 35px;
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+
+
+
+.request button {
+    background: #fff;
+    color: var(--primary);
+    border: none;
+}
+
+.request button:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+@media(max-width:768px) {
+    .request .text p {
+        font-size: 17px;
+    }
+
+    .request button {
+        font-size: 17px;
+        padding: 7px 20px;
+        font-weight: bold;
+        transition: 0.5s ease;
+    }
+}
+
+@media(max-width:578px) {
+.request{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+}

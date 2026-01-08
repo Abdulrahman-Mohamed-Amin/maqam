@@ -1,0 +1,24 @@
+<header class="bg-white ">
+    <div class="container">
+        <nav class="d-flex justify-content-between align-items-center">
+            <img src="assets/logo-dark-h.png " alt="logo" routerLink="/home">
+
+            <ul class="links" [ngClass]="{'open_menu' : menuOpen}">
+                <li routerLink="/home" routerLinkActive="active"><a>الرئيسية</a></li>
+                <li routerLink="/about" routerLinkActive="active"><a>من نحن</a></li>
+                <li routerLink="/projects" routerLinkActive="active"><a>أعمالنا</a></li>
+                <li routerLink="/services" routerLinkActive="active"><a>خدماتنا</a></li>
+                <li routerLink="/contact" routerLinkActive="active"><a>اتصل بنا</a></li>
+                <i class="fas fa-xmark d-lg-none d-block close"></i>
+            </ul>
+            <div class="menu-icon" (click)="toggleMenu()" [class.open]="menuOpen" >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+        </nav>
+    </div>
+    <div class="lay" [ngClass]="{'open_menu' : menuOpen}"></div>
+</header>

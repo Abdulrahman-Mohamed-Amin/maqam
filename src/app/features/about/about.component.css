@@ -1,0 +1,248 @@
+.sec_1 {
+    padding-top: 100px;
+}
+
+.sec_1 .img_cont {
+    height: 500px;
+    width: 100%;
+}
+
+.sec_1 .img_cont img {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px 20px 0 0;
+}
+
+.sec_1 h3 {
+    font-size: 35px;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+}
+
+.sec_1 p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.sec_1 button {
+    margin-top: 20px;
+}
+
+@media(max-width:991px) {
+    .sec_1 .img_cont {
+        height: 400px;
+    }
+
+    .sec_1 .box {
+        text-align: center;
+    }
+}
+
+@media(max-width:578px) {
+    .sec_1 .img_cont {
+        height: 300px;
+    }
+
+    .sec_1 .box p {
+        font-size: 14px;
+    }
+
+    .sec_1 button {
+        margin-top: 10px;
+    }
+}
+
+
+/* ================ sec 2 ======================= */
+
+.sec_2 {
+    position: relative;
+    background-image: url(../../../assets/imgs/building-9114701_640.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0 250px;
+}
+
+.lay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    background: var(--primary-dark);
+    opacity: 0.95;
+}
+
+.sec_2 .container {
+    position: relative;
+    z-index: 2;
+}
+
+.sec_2 .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+    padding: 15px;
+    border: 2px solid #ccc;
+    text-align: center;
+    height: 100%;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.sec_2 .box:hover {
+
+    background: var(--primary);
+
+}
+
+.sec_2 .box img {
+    width: 40px;
+    filter: opacity(0.7);
+}
+
+/* ================ sec  ======================= */
+
+.sec_3 {
+    padding: 550px 0 40px;
+    position: relative;
+}
+
+.sec_3 h2 {
+    color: var(--primary-dark);
+}
+
+.sec_3 .container {
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 40px 30px;
+    border-radius: 25px;
+    background: #f5f6f9;
+}
+
+.sec_3 .box {
+    border: 2px solid #ccc;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.sec_3 .box:hover {
+    background: var(--primary-dark);
+    color: #fff;
+}
+
+.sec_3 .box img {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 50%;
+    background: linear-gradient(to left, var(--primary-l), var(--primary-dark));
+}
+
+.sec_3 .box h4 {
+    color: var(--primary-l)
+}
+
+.container {
+    width: 90%;
+}
+
+@media(max-width:991px) {}
+
+@media(max-width:768px) {
+    .sec_3 {
+        padding: 600px 0 40px;
+    }
+}
+
+@media(max-width:578px) {
+    .sec_3 {
+        padding: 850px 0 40px;
+    }
+
+    .sec_3 .box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+@media(max-width:400px) {
+    .sec_3 {
+        padding: 1000px 0 40px;
+    }
+}
+
+/* ====================== sec 4 =================== */
+
+.why-us {
+    padding: 80px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #222;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.why-card {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .06);
+    transition: .3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-l), var(--primary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    color: #fff;
+}
+
+.why-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.why-card p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
+}

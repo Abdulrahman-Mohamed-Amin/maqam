@@ -1,0 +1,107 @@
+/* ================ font ============== */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+
+/* ================ font ============== */
+
+:root {
+
+  --primary-dark: #183860;
+  --primary: #0085a3;
+  --primary-l: #00bad8;
+  --gray-m: #c6c3c6;
+  --gray-l: #dcdcdc;
+  --shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  ;
+
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  direction: rtl;
+}
+
+/* ====================== global ====================== */
+
+
+/*============================ component=========================== */
+
+.p-80 {
+  padding: 80px 0;
+}
+
+.gradient-btn {
+  padding: 14px 38px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(120deg,
+      var(--primary),
+      var(--primary-l),
+      var(--primary-dark),
+      #00c6ff);
+  background-size: 300% 300%;
+  background-position: 0% 50%;
+  transition: background-position 0.5s ease, transform 0.3s ease;
+}
+
+.gradient-btn:hover {
+  background-position: 100% 50%;
+  transform: translateY(-2px);
+}
+
+.gradient-btn:active {
+  transform: translateY(0);
+}
+
+@media(max-width:578px) {
+  .gradient-btn {
+    padding: 10px 20px;
+
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: 40px;
+  color: var(--primary-dark);
+  margin-bottom: 50px;
+}
+
+.sec_header {
+  color: #fff;
+  background: var(--primary);
+  padding: 30px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.sec_header p {
+  margin: 10px 0 0;
+  font-size: 13px;
+}
+
+.sec_header span {
+  background: #fff;
+  font-weight: bold;
+  padding: 4px 6px;
+  color: var(--primary-l);
+  margin: 0 5px;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+
+.sec_header span:hover {
+  background: var(--primary);
+  color: #fff;
+
+}

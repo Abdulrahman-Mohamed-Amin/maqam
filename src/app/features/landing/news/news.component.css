@@ -1,0 +1,21 @@
+.container{
+    position: relative;
+    z-index: 10;
+}
+.new{
+    box-shadow: var(--shadow);
+}
+.text{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.text span {
+    font-size: 11px;
+}
+.text h4{
+    color: var(--primary-dark);
+}
+
+

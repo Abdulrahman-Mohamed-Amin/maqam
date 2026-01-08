@@ -1,0 +1,79 @@
+<section>
+    <app-header></app-header>
+    <div class="sec_header">
+        <h2>اتصل بنا</h2>
+        <p> <span routerLink="/home">الرئيسية</span> / اتصل بنا </p>
+    </div>
+
+    <!-- ======================= section ================== -->
+
+    <section class="contact-section position-relative">
+        <img src="../../../assets/outline-shape.png" alt="pattern" class="pattern">
+        <div class="container">
+
+            <div class="contact-header">
+                <span>اتصل بنا</span>
+                <h2>نقدم لك كل الخيارات التي تتناسب مع احتياجاتك</h2>
+            </div>
+
+            <div class="contact-wrapper">
+
+                <!-- Form -->
+                <div class="contact-form">
+                    <p class="form-text">
+                        ارسل لنا استفسارك الآن وسيتم الرد عليك في أقرب وقت ممكن
+                    </p>
+
+                    <form>
+                        <div class="form-row">
+                            <input type="text" placeholder="الاسم بالكامل">
+                            <input type="tel" placeholder="رقم الجوال">
+                        </div>
+
+                        <div class="form-row">
+                            <input type="email" placeholder="البريد الإلكتروني">
+                            <input type="text" placeholder="الموضوع">
+                        </div>
+
+                        <textarea placeholder="الرسالة"></textarea>
+
+                        <button type="submit">إرسال</button>
+                    </form>
+                </div>
+
+                <!-- Info -->
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h4>العنوان</h4>
+                        <p>جدة - حي السلامة - مكتب اليمامة للأعمال - مكتب 201</p>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <h4>الجوال</h4>
+                        <p>⁦+966 53 777 8106⁩</p>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <h4>البريد الإلكتروني</h4>
+                        <p>maqamalfetheya&#64;gmail.com</p>
+                    </div>
+
+                    <div class="social d-flex align-items-center gap-2 justify-content-center">
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-tiktok"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <app-footer></app-footer>
+</section>
+<router-outlet></router-outlet>
