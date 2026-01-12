@@ -8,17 +8,30 @@
                 <li routerLink="/about" routerLinkActive="active"><a>من نحن</a></li>
                 <li routerLink="/projects" routerLinkActive="active"><a>أعمالنا</a></li>
                 <li routerLink="/services" routerLinkActive="active"><a>خدماتنا</a></li>
-                <li routerLink="/contact" routerLinkActive="active"><a>اتصل بنا</a></li>
+                <li routerLink="/contact" routerLinkActive="active"><a>تواصل معنا</a></li>
                 <i class="fas fa-xmark d-lg-none d-block close"></i>
             </ul>
-            <div class="menu-icon" (click)="toggleMenu()" [class.open]="menuOpen" >
+            <div class="d-flex gap-3 align-items-center">
+                <div class="btns d-flex gap-sm-1 gap-2">
+                    <a href="https://wa.me/966537778106" class="whats" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>تحدث معنا</span>
+                    </a>
+                    <a href="tel:+966537778106" class="call" target="_blank">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <span>اتصل بنا</span>
+                    </a>
+                </div>
 
-                <span></span>
-                <span></span>
-                <span></span>
-
+                <div class="menu-icon" (click)="toggleMenu()" [class.open]="menuOpen">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </nav>
     </div>
     <div class="lay" [ngClass]="{'open_menu' : menuOpen}"></div>
 </header>
+
+

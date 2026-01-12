@@ -84,24 +84,135 @@
   margin-top: 80px;
 }
 
+.sec_header h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
 .sec_header p {
-  margin: 10px 0 0;
-  font-size: 13px;
+  font-size: 11px;
+  margin: 0;
 }
 
 .sec_header span {
-  background: #fff;
   font-weight: bold;
-  padding: 4px 6px;
-  color: var(--primary-l);
+  color: #fff;
   margin: 0 5px;
   transition: 0.3s;
   cursor: pointer;
-  border: 1px solid #fff;
 }
 
 .sec_header span:hover {
   background: var(--primary);
-  color: #fff;
-
+  color: var(--primary-dark);
 }
+
+
+
+/* ========================= تفاصيل المشروع ================================ */
+.project_det {
+  padding: 150px 0 80px;
+}
+
+.project_det .header {
+  margin-bottom: 30px;
+}
+
+.project_det .header button {
+  border: none;
+  background: var(--primary-dark);
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.project_det .header button:hover {
+  background: #183860c7;
+}
+
+.project_det h2 {
+  color: var(--primary-dark);
+}
+
+.project_det span {
+  color: #777;
+}
+
+/* end header  */
+
+.project_det .img_cont {
+  height: 500px;
+}
+
+.project_det .img_cont img {
+  height: 100%;
+  width: 100%;
+}
+
+.project_det .box {
+  height: 100%;
+}
+
+.project_det .box .info {
+  background: #f5f6f9;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+
+.project_det .box .info h6 {
+  font-weight: bold;
+  font-size: 17px;
+  color: var(--primary);
+}
+
+@media(max-width:578px) {
+  .project_det .img_cont {
+    height: 350px;
+  }
+}
+
+/* end row   */
+
+.project_det .about_project {
+  margin: 40px 0 80px;
+}
+
+.project_det .about_project h3 {
+  color: var(--primary-dark);
+}
+
+.project_det .list {
+  column-count: 3;
+  column-gap: 16px;
+}
+
+.project_det .list img {
+  width: 100%;
+  margin-bottom: 16px;
+  display: block;
+  border-radius: 12px;
+  break-inside: avoid;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .project_det .list {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .project_det .list {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .project_det .list {
+    column-count: 1;
+  }
+}
+
+/* ========================= تفاصيل المشروع ================================ */

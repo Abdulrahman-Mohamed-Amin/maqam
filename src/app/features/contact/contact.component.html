@@ -24,18 +24,18 @@
                         ارسل لنا استفسارك الآن وسيتم الرد عليك في أقرب وقت ممكن
                     </p>
 
-                    <form>
+                    <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
                         <div class="form-row">
-                            <input type="text" placeholder="الاسم بالكامل">
-                            <input type="tel" placeholder="رقم الجوال">
+                            <input type="text" placeholder="الاسم بالكامل" formControlName="name">
+                            <input type="tel" placeholder="رقم الجوال" formControlName="phone">
                         </div>
 
                         <div class="form-row">
-                            <input type="email" placeholder="البريد الإلكتروني">
-                            <input type="text" placeholder="الموضوع">
+                            <input type="email" placeholder="البريد الإلكتروني" formControlName="mail">
+                            <input type="text" placeholder="الموضوع" formControlName="subject">
                         </div>
 
-                        <textarea placeholder="الرسالة"></textarea>
+                        <textarea placeholder="الرسالة" formControlName="message"></textarea>
 
                         <button type="submit">إرسال</button>
                     </form>
@@ -46,7 +46,7 @@
                     <div class="info-item">
                         <i class="fa-solid fa-location-dot"></i>
                         <h4>العنوان</h4>
-                        <p>جدة - حي السلامة - مكتب اليمامة للأعمال - مكتب 201</p>
+                        <p>جدة - حي السلامة - مركز اليمامة للأعمال - مكتب 201</p>
                     </div>
 
                     <div class="info-item">
@@ -70,7 +70,10 @@
                 </div>
 
             </div>
+
         </div>
+
+        <div class="toaster" [ngClass]="{'success': stauas , 'failed' : !stauas , 'show' : toasterShow }">{{toasterText}}</div>
     </section>
 
 

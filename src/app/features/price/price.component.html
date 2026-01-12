@@ -1,1 +1,94 @@
-<p>price works!</p>
+<section>
+    <app-header></app-header>
+
+    <div class="sec_header">
+        <h2>طلب عرض سعر</h2>
+        <p> <span routerLink="/home">الرئيسية</span> / عرض سعر </p>
+    </div>
+
+    <form action="" [formGroup]="priceForm" (ngSubmit)="sendEmail()">
+        <div class="header text-center mb-5 ">
+            <h6>ترغب بالعمل معنا ؟</h6>
+            <h5>نقدم لك كل الخيارات التي تتناسب مع إحتياجاتك</h5>
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">الاسم الكامل <span>*</span></label>
+            <input type="text" class="form-control" id="name" formControlName="name">
+        </div>
+
+        <div class="mb-3">
+            <label for="phone" class="form-label">رقم الجوال <span>*</span></label>
+            <input type="text" class="form-control" id="phone" formControlName="phone">
+        </div>
+
+        <div class="mb-3">
+            <label for="mail" class="form-label">البريد الإلكتروني <span>*</span></label>
+            <input type="text" class="form-control" id="mail" formControlName="mail">
+        </div>
+
+        <div class="mb-3 choises">
+            <label for="" class="form-label choice_lable">اختر الخدمات المطلوبة <span>*</span></label>
+            <div class=" d-flex gap-1">
+                <input type="radio" id="choice_1" name="service" formControlName="service" value="المقاولات العامة">
+                <label for="choice_1">المقاولات العامة</label>
+            </div>
+            <div class="d-flex gap-1">
+                <input type="radio" id="choice_2 " name="service" formControlName="service" value="التشطيبات">
+                <label for="choice_2">التشطيبات</label>
+            </div>
+            <div class=" d-flex gap-1">
+                <input type="radio" id="choice_3" name="service" formControlName="service" value="التصميم الهندسي">
+                <label for="choice_2">التصميم الهندسي </label>
+            </div>
+            <div class=" d-flex gap-1">
+                <input type="radio" id="choice_4" name="service" formControlName="service" value="الترميم">
+                <label for="choice_4">الترميم </label>
+            </div>
+        </div>
+
+        <div class="mb-3 choises">
+            <label class="form-label choice_lable">
+                نوع الطلب <span>*</span>
+            </label>
+
+            <div class="d-flex gap-1">
+                <input type="radio" id="choice_5" name="request" formControlName="request" value="عرض سعر">
+                <label for="choice_5">عرض سعر</label>
+            </div>
+
+            <div class="d-flex gap-1">
+                <input type="radio" id="choice_6" name="request" formControlName="request" value="زيارة">
+                <label for="choice_6">زيارة</label>
+            </div>
+
+            <div class="d-flex gap-1">
+                <input type="radio" id="choice_7" name="request" formControlName="request" value="اجتماع اونلاين">
+                <label for="choice_7">اجتماع أون لاين</label>
+            </div>
+
+        </div>
+
+        <div class="mb-3">
+            <label for="time" class="form-label">الوقت المناسب <span>*</span></label>
+            <input type="datetime-local" class="form-control" id="time" formControlName="time">
+        </div>
+
+        <div class="mb-3">
+            <label for="notice" class="form-label">ملاحظات مع الطلب <span>*</span></label>
+            <textarea class="form-control" formControlName="notice"></textarea>
+        </div>
+
+        <button class="gradient-btn">ارسال</button>
+    </form>
+    <div class="toaster" [ngClass]="{'success': stauas , 'failed' : !stauas , 'show' : toasterShow }">{{toasterText}}
+    </div>
+
+
+    <!-- الكوبي رايت -->
+    <div class="footer-bottom text-center mt-5 py-3">
+        <small>
+            جميع الحقوق محفوظة © 2026 شركة مقام الفضية للمقاولات
+        </small>
+    </div>
+
+</section>

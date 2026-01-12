@@ -1,0 +1,112 @@
+.header h6 {
+    color: var(--primary-l);
+}
+
+.header h5 {
+    color: var(--primary-dark);
+}
+
+form {
+    width: 400px;
+    margin: 80px auto;
+}
+
+form label {
+    color: var(--primary);
+    font-size: 15px;
+}
+
+form label span {
+    color: red;
+    font-size: 11px;
+}
+
+.choises {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.choises .choice_lable {
+    width: 100%;
+
+}
+
+.choises div {
+    align-items: center;
+    width: 50%;
+}
+
+.choises div label {
+    color: var(--primary-dark);
+    font-size: 14px;
+
+}
+
+.form-control {
+    background: #f2f2f2;
+    border-radius: 0;
+    border-color: #f2f2f2;
+}
+
+.form-control:focus {
+    border: 1px solid var(--primary);
+    box-shadow: none;
+}
+
+input[type="radio"] {
+    accent-color: #0085a3;
+    width: 15px;
+    height: 15px;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+button {
+    margin: 30px auto;
+    display: block;
+    padding: 10px 38px;
+
+}
+
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  background: #122f4f;
+  color: #fff;
+}
+@media(max-width:578px){
+    form{
+        width: 90%;
+    }
+}
+
+
+
+.toaster {
+  color: #fff;
+  padding: 15px;
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 51;
+  width: 200px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 17px;
+  opacity: 0;
+  
+}
+.toaster.show{
+  opacity: 1;
+}
+.toaster.success{
+  background: rgb(29, 161, 29);
+}
+.toaster.failed{
+  background: rgb(180, 33, 33);
+}

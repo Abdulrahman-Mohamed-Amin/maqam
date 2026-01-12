@@ -5,6 +5,7 @@ import { AllServicesComponent } from './features/all-services/all-services.compo
 import { AllProjectsComponent } from './features/all-projects/all-projects.component';
 import { ContactComponent } from './features/contact/contact.component';
 import { PriceComponent } from './features/price/price.component';
+import { Project1Component } from './features/projects_detils/project1/project1.component';
 
 export const routes: Routes = [
     {path:'' , redirectTo:"home" , pathMatch:'full'},
@@ -14,4 +15,5 @@ export const routes: Routes = [
     {path:'projects' , component:AllProjectsComponent},
     {path:'contact' , component:ContactComponent},
     {path:'price' , component:PriceComponent},
+    {path:'project_1' , component:Project1Component},
 ];

@@ -4,13 +4,15 @@
   color: var(--primary-dark);
   overflow: hidden;
 }
-.pattern{
-    position: absolute;
-    right: -50px;
-    top: 50px;
-    filter: grayscale() opacity(0.15);
-    z-index: -1;
+
+.pattern {
+  position: absolute;
+  right: -50px;
+  top: 50px;
+  filter: grayscale() opacity(0.15);
+  z-index: -1;
 }
+
 .container {
   max-width: 1200px;
   margin: auto;
@@ -67,10 +69,16 @@
   border: none;
   outline: none;
   background: #dcdcdc83;
+  transition: 0.3s;
+  border: 1px solid #dcdcdc83;
 }
 
+.contact-form input:focus , .contact-form textarea:focus{
+  border:1px solid var(--primary-l);
+}
 .contact-form textarea {
-  min-height: 130px;
+  min-height: 170px;
+  resize: none;
   margin-bottom: 20px;
 }
 
@@ -130,6 +138,7 @@
   transition: 0.3s;
   cursor: pointer;
 }
+
 .social i:hover {
 
   background: var(--primary);
@@ -146,9 +155,10 @@
 @media (max-width: 992px) {
   .contact-wrapper {
     grid-template-columns: 1fr;
-    
+
   }
-  .container{
+
+  .container {
     max-width: 95%;
     margin: 0;
   }
@@ -168,3 +178,29 @@
     font-size: 24px;
   }
 }
+
+
+.toaster {
+  color: #fff;
+  padding: 15px;
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 51;
+  width: 200px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 17px;
+  opacity: 0;
+  
+}
+.toaster.show{
+  opacity: 1;
+}
+.toaster.success{
+  background: rgb(29, 161, 29);
+}
+.toaster.failed{
+  background: rgb(180, 33, 33);
+}
+

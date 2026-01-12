@@ -1,4 +1,4 @@
-header{
+header {
     padding: 10px 0;
     border-bottom: 1px solid #ccc;
     position: fixed;
@@ -8,12 +8,14 @@ header{
     background: #fff;
     z-index: 49;
 }
-img{
+
+img {
     width: 150px;
     right: 0;
     top: 50%;
     cursor: pointer;
 }
+
 ul {
     list-style: none;
     display: flex;
@@ -21,38 +23,46 @@ ul {
     padding: 0;
     margin: 0;
 }
-ul li{
+
+ul li {
     padding: 9px 17px;
     border-radius: 15px;
     cursor: pointer;
 }
-ul li:hover , ul li.active{
+
+ul li:hover,
+ul li.active {
     background: #00bbd850;
 }
-ul li:hover a, ul li.active a{
+
+ul li:hover a,
+ul li.active a {
     color: var(--primary);
 }
-ul li a{
+
+ul li a {
     color: var(--primary-dark);
     font-weight: 700;
 }
-.links{
+
+.links {
     z-index: 50;
 }
-.lay{
+
+.lay {
     width: calc(100% - 300px);
     background: #00000062;
     height: 100vh;
     position: fixed;
     top: 0;
-    left:0 ;
+    left: 0;
     z-index: 50;
     transform: translateX(-100%);
     transition: 0.3s;
 }
 
-@media(max-width:991px){
-    .links{
+@media(max-width:991px) {
+    .links {
         position: fixed;
         height: 100vh;
         width: 300px;
@@ -66,10 +76,11 @@ ul li a{
         transition: 0.3s;
     }
 
-    .links li{
+    .links li {
         border-radius: 15px;
     }
-    .close{
+
+    .close {
         position: absolute;
         top: 20px;
         left: 15px;
@@ -81,74 +92,125 @@ ul li a{
         text-align: center;
         line-height: 25px;
     }
-    .close:hover{
+
+    .close:hover {
         background: var(--sec2);
         cursor: pointer;
     }
-    .bar{
+
+    .bar {
         font-size: 22px;
         color: var(--main);
         cursor: pointer;
     }
-    .bar:hover{
+
+    .bar:hover {
         color: var(--blue);
     }
-    .open_menu{
+
+    .open_menu {
         transform: translateX(0);
     }
 }
 
-@media(max-width:578px){
-    img{
-         width: 130px;
+@media(max-width:578px) {
+    img {
+        width: 130px;
     }
 }
-@media(max-width:350px){
-    .links{
+
+@media(max-width:350px) {
+    .links {
         width: 230px;
     }
-    .lay{
-    width: calc(100% - 230px);
-}
+
+    .lay {
+        width: calc(100% - 230px);
+    }
 }
 
 
 .menu-icon {
-  width: 28px;
-  height: 22px;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  position: relative;
-  z-index: 51;
+    width: 28px;
+    height: 22px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    z-index: 51;
 }
 
 .menu-icon span {
-  height: 3px;
-  width: 100%;
-  background-color: #000;
-  border-radius: 2px;
-  transition: 0.3s ease;
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 2px;
+    transition: 0.3s ease;
 }
 
 /* الحالة المفتوحة → X */
 .menu-icon.open span:nth-child(1) {
-  transform: rotate(45deg) translate(7px, 7px);
+    transform: rotate(45deg) translate(7px, 7px);
 }
 
 .menu-icon.open span:nth-child(2) {
-  opacity: 0;
+    opacity: 0;
 }
 
 .menu-icon.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+    transform: rotate(-45deg) translate(6px, -6px);
 
 }
 
 /* يظهر في الموبايل فقط */
 @media (max-width: 992px) {
-  .menu-icon {
+    .menu-icon {
+        display: flex;
+    }
+}
+
+
+.btns a {
+    padding: 7px 12px;
+    text-decoration: none;
+    margin: 0 3px;
     display: flex;
-  }
+    align-items: center;
+    gap: 5px;
+    transition: 0.3s;
+    border: 1px solid var(--primary-dark);
+    font-weight: bold;
+}
+
+.btns a:first-child {
+    background: linear-gradient(to left, #0e1f35d0, #0e1f35);
+    color: #fff;
+}
+
+.btns a:last-child {
+    background: #fff;
+    color: var(--primary-dark);
+    border: 1px solid var(--primary-dark);
+}
+
+.btns a:last-child:hover {
+    background: linear-gradient(to left, #0e1f35d0, #0e1f35);
+    color: #fff;
+}
+
+.btns a:first-child:hover {
+    background: #fff;
+    color: var(--primary-dark);
+}
+
+@media(max-width:578px) {
+    .btns {
+        position: fixed;
+        bottom: 20px;
+        left: 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
 }
