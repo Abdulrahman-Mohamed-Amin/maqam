@@ -42,6 +42,7 @@
 
 /* Form Box */
 .contact-form {
+  padding: 20px;
   border-radius: 16px;
   border: 1px solid #ccc;
   background: #fff;
@@ -203,3 +204,21 @@
   background: rgb(180, 33, 33);
 }
 
+/* @keyframes toast {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  25% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+} */
