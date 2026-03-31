@@ -9,6 +9,9 @@
 form {
     width: 400px;
     margin: 80px auto;
+    position: relative;
+    z-index: 2;
+    background: #fff;
 }
 
 form label {
@@ -109,4 +112,12 @@ button {
 }
 .toaster.failed{
   background: rgb(180, 33, 33);
+}
+
+.pattern{
+  position: absolute;
+  top: 200px;
+  right: 0;
+  filter: grayscale() opacity(0.3);
+  z-index: 0;
 }

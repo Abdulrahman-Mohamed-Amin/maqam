@@ -4,15 +4,55 @@
 
 .box {
     overflow: hidden;
+    background: #ffffff;
+    height: 200px;
+    color: var(--primary);
+    box-shadow: var(--shadow);
     position: relative;
-    background: #000;
-    height: 320px;
+    border: 1px solid #f1f1f1;
+}
+
+.col-12:nth-child(1) .box {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+}
+
+.col-12 {
+    position: relative;
+}
+
+.col-12::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #00bad8;
+    top: -3px;
+    right: 8px;
+    z-index: -1;
+
+}
+
+.num {
+    color: #fff;
+    background: #18386067;
+    color: var(--primary-dark);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin: 20px;
 }
 
 img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
     transition: 0.8s;
+    display: none;
 }
 
 .lay {
@@ -27,12 +67,29 @@ img {
     top: 0;
     left: 0;
     transition: 0.8s;
+    display: none;
 }
 
 .box:hover img {
     scale: 1.1;
+    display: block;
 }
 
+.box:hover .lay {
+    display: block;
+}
+
+.box:hover {
+    color: #fff;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.8s;
+    display: none;
+}
 
 .row .info {
     position: absolute;
@@ -45,15 +102,14 @@ img {
 
 .row .info h4 {
     font-size: 25px;
-    color: #fff;
     transition: 0.8s;
-
+    font-weight: bold;
 }
 
 .row .info p {
-    color: #fff;
     position: relative;
-    font-size: 10px;
+    font-size: 11px;
+
 }
 
 .shape {
@@ -64,8 +120,6 @@ img {
     height: 100%;
     width: 400px;
 }
-
-
 
 .request {
     margin-top: 50px;
@@ -95,8 +149,6 @@ img {
     transition: 0.5s ease;
 }
 
-
-
 .request button {
     background: #fff;
     color: var(--primary);
@@ -112,7 +164,6 @@ img {
     .request .text p {
         font-size: 17px;
     }
-
     .request button {
         font-size: 17px;
         padding: 7px 20px;
@@ -122,10 +173,10 @@ img {
 }
 
 @media(max-width:578px) {
-.request{
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    gap: 20px;
-}
+    .request {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+    }
 }

@@ -5,7 +5,41 @@
         <p> <span routerLink="/home">الرئيسية</span> / خدماتنا </p>
     </div>
 
-    <app-our-services [title]="false"></app-our-services>
+    
+    <div class="services p-80">
+
+    <div class="container">
+        <div class="row gy-4">
+
+            @for(serv of services ; track $index){
+
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="box">
+                        <img [src]="url + serv.interfacePath" alt="services" loading="lazy">
+                        <div class="info">
+                            <h4 data-aos="fade-left">{{serv.arTitle}} </h4>
+                            <p>{{serv.arDescription}} </p>
+                        </div>
+                        <div class="lay"></div>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </div>
+
+
+
+
+</div>
+<div class="request container-lg container-fluid">
+    <div class="text ">
+        <p>لديك مشروع ؟ </p>
+        <p>أخبرنا عن تفاصيل طلبك ودعنا نتولى الأمر</p>
+    </div>
+    <button routerLink="/price">طلب عرض سعر</button>
+</div>
     <app-footer></app-footer>
 </section>
 <router-outlet></router-outlet>

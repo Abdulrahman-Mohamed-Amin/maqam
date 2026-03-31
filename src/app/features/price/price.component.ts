@@ -29,8 +29,12 @@ export class PriceComponent {
   constructor() {
 
   }
+  
+
+
 
   sendEmail() {
+console.log(this.priceForm.value);
 
     if (this.priceForm.valid) {
       emailjs.send(

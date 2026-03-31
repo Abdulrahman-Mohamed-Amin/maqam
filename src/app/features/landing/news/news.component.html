@@ -2,59 +2,35 @@
     <h2 class="title">الأخبار</h2>
 
     <div class="container">
-        <div class="row gy-4">
 
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="new">
-                    <div class="img_cont">
-                        <img src="assets/imgs/rebuildung.jpg" alt="news" class="img-fluid">
+
+
+
+
+
+        <div class="swiper mySwiper2 mt-5">
+            <div class="swiper-wrapper">
+                @for(n of news ; track $index){
+
+                    <div class="swiper-slide news-card">
+                        <div class="new">
+                            <div class="img_cont">
+                                <img [src]="url + n.interfaceImagePath" alt="news" class="img-fluid" loading="lazy">
+                            </div>
+                            <div class="text">
+                                <span> {{n.date}}</span>
+                                <h4>{{n.arTitle}}</h4>
+                                <p>{{n.arDescription}}</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text">
-                        <span>مارس 1, 2019</span>
-                        <h4>مشروع سكني</h4>
-                        <p>أُعلن اليوم عن إطلاق مشروع سكني جديد يهدف إلى توفير وحدات سكنية حديثة تلبي احتياجات الأفراد
-                            والعائلات، وتواكب معايير الجودة والتخطيط العمراني المتطور.
-                            ويتميز المشروع بتصميم عصري يراعي توفير بيئة سكنية مريحة وآمنة، إضافة إلى الاهتمام بالمساحات
-                            الخضراء والخدمات الأساسية</p>
-                    </div>
-                </div>
+                }
+
+
             </div>
-
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="new">
-                    <div class="img_cont">
-                        <img src="assets/imgs/houses-8618837_1280.jpg" alt="news" class="img-fluid">
-                    </div>
-                    <div class="text">
-                        <span>يناير 1, 2019</span>
-                        <h4>مشروع سكني</h4>
-                        <p>أُعلن اليوم عن إطلاق مشروع سكني جديد يهدف إلى توفير وحدات سكنية حديثة تلبي احتياجات الأفراد
-                            والعائلات، وتواكب معايير الجودة والتخطيط العمراني المتطور.
-                            ويتميز المشروع بتصميم عصري يراعي توفير بيئة سكنية مريحة وآمنة، إضافة إلى الاهتمام بالمساحات
-                            الخضراء والخدمات الأساسية</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="new">
-                    <div class="img_cont">
-                        <img src="assets/imgs/building-9114701_640.jpg" alt="news" class="img-fluid">
-                    </div>
-                    <div class="text">
-                        <span>يناير 1, 2019</span>
-                        <h4>مشروع سكني</h4>
-                        <p>أُعلن اليوم عن إطلاق مشروع سكني جديد يهدف إلى توفير وحدات سكنية حديثة تلبي احتياجات الأفراد
-                            والعائلات، وتواكب معايير الجودة والتخطيط العمراني المتطور.
-                            ويتميز المشروع بتصميم عصري يراعي توفير بيئة سكنية مريحة وآمنة، إضافة إلى الاهتمام بالمساحات
-                            الخضراء والخدمات الأساسية</p>
-                    </div>
-                </div>
-            </div>
-
-
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </div>
-</div>
 
+</div>

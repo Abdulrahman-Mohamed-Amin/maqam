@@ -23,6 +23,7 @@
     transition: 0.5s;
         height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 .box:hover .project_img{
     scale: 1.1;
@@ -41,7 +42,6 @@
     position: absolute;
     top: 0;
     left: 50%;
-    /* transform: translateX(-50%); */
     width: 30%;
 filter: grayscale();
 opacity: 0.2;

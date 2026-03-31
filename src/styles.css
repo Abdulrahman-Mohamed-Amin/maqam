@@ -1,4 +1,5 @@
 /* ================ font ============== */
+@import 'swiper/swiper-bundle.css';
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
 
 /* ================ font ============== */
@@ -216,3 +217,41 @@
 }
 
 /* ========================= تفاصيل المشروع ================================ */
+
+
+
+
+
+
+
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: var(--primary-dark);
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 5px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 25px;
+
+  color: #fff;
+  font-weight: bold;
+
+}
+
+.swiper-button-prev {
+  left: -100px;
+}
+
+.swiper-button-next {
+  right: -100px;
+}
