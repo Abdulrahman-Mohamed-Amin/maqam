@@ -3,7 +3,8 @@ export interface News {
   id: number;
   arTitle: string;
   enTitle: string | null;
-  interfaceImagePath: string;
+  imagePath: string;
+  vedioPath: string;
   arDescription: string;
   enDescription: string | null;
   date: string;

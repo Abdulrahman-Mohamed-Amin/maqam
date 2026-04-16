@@ -14,7 +14,10 @@
                              </div>
                              <div class="info">
                                  <div class="catigories d-flex align-items-center gap-2">
-                                     <span>{{project.arProjectCategory}}</span>
+                                    @for(s of project.services ; track $index){
+
+                                        <span>{{s.arTitle.slice(2)}}</span>
+                                    }
     
                                  </div>
                                  <h4>{{project.arTitle}}</h4>
@@ -28,3 +31,4 @@
         <button class="gradient-btn" routerLink="/projects">عرض جميع المشاريع</button>
     </div>
 </div>
+

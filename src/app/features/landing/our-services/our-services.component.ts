@@ -23,7 +23,6 @@ export class OurServicesComponent {
   getAllService() {
     this._service.getServices().subscribe(res =>{
       this.services = res 
-      console.log(res);
     })
   }
 }

@@ -24,16 +24,19 @@ export class NewsComponent implements AfterViewInit {
   }
 ngOnInit() {
   this.getNews()
+
+  
   
 }
-  ngAfterViewInit() {
-    this.initSwiper();
-  }r?: Swiper;
+ngAfterViewInit() {
+  this.initSwiper();
+}r?: Swiper;
 
-  getNews (){
-    this._news.getNews().subscribe(res =>{
-      this.news = res
-      console.log(res);
+getNews (){
+  this._news.getNews().subscribe(res =>{
+    this.news = res
+    
+console.log(res);
       
     })
   }

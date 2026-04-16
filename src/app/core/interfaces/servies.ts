@@ -6,4 +6,5 @@ export interface Service {
   enTitle: string;
   enDescription: string;
   interfacePath: string;
+  
 }

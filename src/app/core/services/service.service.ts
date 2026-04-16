@@ -14,4 +14,7 @@ export class ServiceService {
   getServices(){
     return this.http.get<Service[]>(this.url)
   }
+  getServiceByid(id:number){
+    return this.http.get<Service>(this.url + "/" + `${id}`)
+  }
 }

@@ -14,4 +14,6 @@ export interface Project {
   projectImages: string[];
   arProjectCategory: string;
   enProjectCategory: string;
+  serviceIds:number[],
+   services?: any[]; 
 }

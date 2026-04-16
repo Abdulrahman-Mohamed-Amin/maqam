@@ -1,1 +1,12 @@
-
+.services{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.services span{
+    background: #00bbd836;
+    color: #00bad8;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+}
